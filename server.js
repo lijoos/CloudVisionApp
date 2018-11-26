@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
  
 const port=process.env.PORT || 8080;
-app.use(express.static(path.join(__dirname,'dist')))
+app.use(express.static(path.join(__dirname,'dist/Cloud-VisionApp')));
 const routes=require('./app/router');
 
 
@@ -45,7 +45,7 @@ app.post('/api/upload',upload.single('photo'), function (req, res) {
 
 app.use('/api',routes);
 app.get('*',(req,res)=>{
-  res.sendfile(path.join(__dirname,'dist/index.html'));
+  res.sendfile(path.join(__dirname,'dist/Cloud-VisionApp/index.html'));
 })
 
 app.listen(port,()=>{
