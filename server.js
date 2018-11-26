@@ -21,7 +21,7 @@ let upload = multer({storage: storage});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
  
-const port='8080';
+const port=process.env.PORT || 8080;
 app.use(express.static(path.join(__dirname,'dist')))
 const routes=require('./app/router');
 
