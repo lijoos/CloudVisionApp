@@ -21,7 +21,7 @@ let upload = multer({storage: storage});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
  
-const port=process.env.PORT || 8080;
+const port=process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname,'dist')));
 const routes=require('./app/router');
 
@@ -49,5 +49,5 @@ app.get('*',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("Serve stated on port "+port);
+    console.log("Serve started on port="+__dirname+"dsfsdf"+port);
 })
