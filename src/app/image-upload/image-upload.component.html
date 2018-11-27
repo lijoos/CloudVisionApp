@@ -2,20 +2,17 @@
   <div class="fbox">
 
     <mat-card class="upload-bar">
-      <div style="text-align:center">
+      <div class="upload-image" >
         <input type="file" name="photo" ng2FileSelect [uploader]="uploader" (change)="onSelectFile($event)" />
-
-        <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-      Upload an Image
-   </button>
+        <button class="upload-button" mat-raised-button color="primary" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">Upload</button>
       </div>
     </mat-card>
-     <img src="../../assets/noresult.png" *ngIf="errorImage" > 
+    <img src="../../assets/noresult.png" *ngIf="errorImage">
     <mat-card *ngIf="showImage">
-    <div class="image-div" >
-      <img [src]="url" class="img-responsive" width="430" height="345" *ngIf="showImage"> 
-      <br/>
-    
+      <div class="image-div">
+        <img [src]="url" class="uploaded-image" *ngIf="showImage">
+        <br/>
+
         <div class="object-list" *ngFor="let item of array">
           <div class="title-container">
             <div class="description">
@@ -26,11 +23,11 @@
             </div>
           </div>
           <div class="w3-light-grey">
-            <div class="w3-blue" style="height:10px;" [style.width]="item.score|percent"></div>
+            <div class="w3-blue rate-meter" [style.width]="item.score|percent"></div>
           </div>
         </div>
-      
-    </div>
+
+      </div>
     </mat-card>
   </div>
 </mat-card>

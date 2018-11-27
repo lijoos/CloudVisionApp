@@ -1,22 +1,24 @@
 
 
 .fbox{
-     display: flex;
+  display: flex;
   margin-top: 3px;
- 
   flex-direction: column;
   align-items: center;
-  
 }
 .upload-bar{
    max-width: 500px;
    margin-bottom: 10px;
 }
+.upload-image{
+  align-self: center;
+}
 .image-div{
  width: 422px;
 }
-
-
+.rate-meter{
+  height: 10px;
+}
 .object-list {
   display: flex; 
   flex-direction: column ;
@@ -35,8 +37,22 @@ flex-grow: 1;
   flex-basis: 1;
   width: 50px;
 }
-
-
+.uploaded-image{
+  height: 100%;
+  width: 100%;
+}
+/* media query fo mobile*/
+@media only screen and (max-width: 500px) {
+.upload-button{
+  margin-top: 3%;
+}
+.upload-bar{
+align-content: center;
+}
+.image-div{
+ width: 280px;
+}
+}
 
 
 
