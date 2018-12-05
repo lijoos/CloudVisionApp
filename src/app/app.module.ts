@@ -7,6 +7,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { NavheaderComponent } from './navheader/navheader.component';
 import { MaterialModule } from "src/app/material-module";
 import { ImageUploadComponent } from './image-upload/image-upload.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-     MaterialModule,FileUploadModule
-
+     MaterialModule,
+     FileUploadModule,
+     BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
