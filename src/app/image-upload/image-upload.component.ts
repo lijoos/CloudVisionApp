@@ -1,7 +1,7 @@
 import { ImageDetectionService } from './../shared/image-detection.service';
 import { Component, OnInit } from '@angular/core';
 import { FileUploadModule, FileUploader, } from "ng2-file-upload";
-const URL = 'http://localhost:3000/api/upload';
+const URL = '/api/upload';
 @Component({
   selector: 'app-image-upload',
   templateUrl: './image-upload.component.html',
