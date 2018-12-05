@@ -11,6 +11,6 @@ export class ImageDetectionService {
   {
     console.log(imageName);
     const header=new HttpHeaders().set('Content-Type','application/json')
-   return this.http.post('http://localhost:3000/api/images?imageName='+imageName,null);
+   return this.http.post('/api/images?imageName='+imageName,null);
   }
 }
